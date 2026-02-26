@@ -10,7 +10,10 @@ Hopmark provides a Web Workflow helper for interacting with a CircuitPython devi
 ## Usage (CLI)
 
 ```bash
-read -p "?? " CP_WEB_WORKFLOW_PASSWORD
+CP_WEB_WORKFLOW_HOST=<hostname|ip-address>
+read -p "password? " CP_WEB_WORKFLOW_PASSWORD
+export CP_WEB_WORKFLOW_HOST
+export CP_WEB_WORKFLOW_PASSWORD
 uv run skills/hopmark/hopmark.py list
 uv run skills/hopmark/hopmark.py read /code.py
 uv run skills/hopmark/hopmark.py write /hello.txt --text "hello"
